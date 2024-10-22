@@ -20,7 +20,7 @@ func CreateRedisNode(port int, path string) {
 	appendToFile(path+"/redis.conf", "port "+strconv.Itoa(port)+"\n")
 	appendToFile(path+"/redis.conf", "dir "+path+"\n")
 	appendToFile(path+"/redis.conf", "always-show-logo yes\n")
-	appendToFile(path+"/redis.conf", "loglevel verbose\n")
+	appendToFile(path+"/redis.conf", "loglevel warning\n")
 	appendToFile(path+"/redis.conf", "save 900 1\n")
 	appendToFile(path+"/redis.conf", "save 300 10\n")
 	appendToFile(path+"/redis.conf", "save 60 10000\n")
